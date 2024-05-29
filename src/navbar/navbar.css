@@ -1,0 +1,81 @@
+.nav {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10; /* Certifique-se de que o menu esteja acima do conteúdo */
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+}
+
+.menu-links {
+  position: fixed;
+  top: 0;
+  right: -450px; /* Inicialmente fora da tela */
+  width: 40%;
+  height: 100%;
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 60px 20px;
+  transition: right 0.3s ease;
+  z-index: 20; /* Acima do nav */
+}
+
+.menu-links.open {
+  right: 0;
+}
+
+.styled-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.styled-link:hover {
+  text-decoration: underline;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 15; /* Abaixo do menu mas acima do conteúdo */
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: auto;
+    width: auto;
+    background: none;
+    padding: 0;
+    transition: none;    
+  }
+
+  .overlay {
+    display: none;
+  }
+}
