@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "React TypeScript on Replit, using Vite bundler",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": "https://github.com/MarcusVinici271/navbarResponsiva",
   "private": false,
   "scripts": {
     "dev": "vite",
